@@ -24,3 +24,4 @@ npm install
 ```bash
 node index.js
 ```
+P.S. Перед запуском не забудьте запустить PostgreSQL бд
