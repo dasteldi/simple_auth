@@ -2,7 +2,7 @@ const express = require("express");
 const path = require('path');
 const app = express();
 const pool = require('./config/db');
-const {registerUser, loginUser} = require('./controllers/userController.js')
+const {registerUser, loginUser} = require('./controllers/authController.js')
 
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json()); 

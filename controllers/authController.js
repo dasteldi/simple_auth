@@ -14,22 +14,6 @@ const generateToken = (username,email) => {
   );
 };
 
-const verifyToken = (req, res, next) => {
-  const token = req.headers.authorization?.split(' ')[1];
-  
-  if (!token) {
-    return res.status(401).json({ message: 'Токен отсутствует' });
-  }
-  
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
-    next();
-  } catch (error) {
-    return res.status(401).json({ message: 'Неверный токен' });
-  }
-};
-
 async function registerUser(username, email, password, req, res){
     if (!username || !email || !password){
         res.redirect("/error.html")
