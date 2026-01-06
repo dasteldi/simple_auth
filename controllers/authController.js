@@ -30,6 +30,7 @@ async function registerUser(username, email, password, req, res){
         reg: "true",
         token_jwt: token
     })
+    res.redirect('/auth/auth')
 }
 
 async function loginUser(username, password, req, res) {
