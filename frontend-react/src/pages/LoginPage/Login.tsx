@@ -11,7 +11,6 @@ function Login() {
                 type="text" 
                 id="username" 
                 name="username" 
-                placeholder="Enter username" 
             />
             
             <label htmlFor="password">Пароль</label>
@@ -19,7 +18,6 @@ function Login() {
                 type="password" 
                 id="password" 
                 name="password" 
-                placeholder="Enter password" 
             />
             
             <button type="submit">Войти</button>
